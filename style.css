@@ -4,3 +4,71 @@
 font-family: 'Bebas Neue', cursive;
 font-family: 'Poppins', sans-serif;
 */
+html, body {
+    height: 100vh;
+    background-image: url(/Desafio-PGE/images/backgroundyellow.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+}
+
+nav {
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-control {
+    font-family: 'Poppins', sans-serif;
+    font-size: 8px;
+    padding: 1 1 1 4px;
+    border-radius: 50px;
+}
+
+h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 100px;
+}
+
+h2, p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    line-height: 200%;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+p {
+    font-size: 20px;
+}
+
+.joinUs {
+    border: none;
+    background-color: white;
+    padding: 2px 80px 2px 80px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 32px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+@media (min-width: 720px) {
+    h1 {
+        font-size: 150px;
+    }
+    h2 {
+        font-size: 28px;
+        margin-top: -40px;
+    }  
+}
+
+@media (min-width: 1400px) {
+    h1 {
+        font-size: 180px;
+    }
+    h2 {
+        font-size: 36px;
+        margin-top: -50px;
+    }
+}
