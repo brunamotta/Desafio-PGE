@@ -10,6 +10,9 @@
         <!--Meu css-->
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/form.css">
+
+        <!-- JS-->
+        <script src="js/form.js" defer></script> <!-- Adiciona o Atributo defer para que o javascript só carrege depois que todo o código HTML esteja carregado. -->
         <title>Desafio PGE - Formulário - Bruna Motta</title>
     </head>
     <body class="bg-warning">
@@ -72,7 +75,7 @@
                         </div>
                         <div class="col-md-6">
                             <label for="inputZip" class="form-label">CPF</label>
-                            <input type="number" class="form-control" placeholder="000.000.000-00">
+                            <input autocomplete="off" id="cpf" maxlength="14" type="text" class="form-control" placeholder="000.000.000-00">
                         </div>
                         <div class="col-md-6">
                             <label for="inputDate" class="form-label">Birth date</label>
