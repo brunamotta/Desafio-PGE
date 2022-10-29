@@ -18,70 +18,51 @@
             <div class="container">
                 <!--logo-->
                 <a class="navbar-brand" href="#"><img src="images/logo.png" alt="Company Name"></a>
-                <div class="col-0 col-md-2 col-lg-3"></div>
-                <div class="col-0 col-md-3 col-lg-3"></div>
-                <div class="col-5 col-md-4 col-lg-3">
                 <!--barra de pesquisa-->
+                <div class="col-5 col-md-4 col-lg-3 offset-md-5">
                     <form class="d-flex">
                         <i class="bi bi-search mx-2"></i>
                         <input class="form-control me-2" type="text" placeholder="SEARCH">
                     </form>
                 </div>
-                <!--botão sanduiche-->
-                <button class="navbar-toggler bg-dark" style="height: 55px; width: 55px; border-radius: 0%;" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <!--conteúdo dentro do sanduíche-->
-                <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                    <ul class="navbar-nav text-end">
-                        <li class="nav-item">
-                            <a class="nav-link text-light" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" href="#">About Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" href="form.html">Join Us</a>
-                        </li>
-                    </ul>
+                <div class="dropdown dropstart">
+                    <button class="navbar-toggler bg-dark" style="height: 55px; width: 55px; border-radius: 0%;" data-bs-toggle="dropdown">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="dropdown-menu bg-dark">
+                        <a class="dropdown-item p-2 text-light" href="index.html">Home</a>
+                        <a class="dropdown-item p-2 text-light" href="#">About Us</a>
+                        <a class="dropdown-item p-2 text-light" href="form.html">Join Us</a>
+                    </div>
                 </div>
             </div>
         </nav>
         <!--corpo da pagina-->
         <div class="container">
-            <div class="row"></div>
             <div class="row">
-                <div class="col-12 col-md-2 col-lg-3"></div>
-                <div class="col-12 col-md-2 col-lg-3"></div>
-                <div class="col-12 col-md-8 col-lg-6 text-center text-md-end">
-                    <div class="row mt-5"> <p></p></div>
-                    <h1 class="text-uppercase">Join Us</h1>
+                <div class="col-12 col-md-8 col-lg-6 text-center text-md-end mt-5 offset-md-4 offset-lg-6">
+                    <h1 class="text-uppercase mt-5">Join Us</h1>
                     <!--formulário-->
                     <form class="row g-3 text-light">
                         <div class="col-md-6">
-                            <label for="input1stName" class="form-label">First Name</label>
-                            <input type="text" class="form-control" id="input1stName" placeholder="John" aria-label="First name">
+                            <label for="input1stName" class="form-label">First Name</label> <input type="text" class="form-control" id="input1stName" placeholder="John" aria-label="First name" required>
                         </div>
                         <div class="col-md-6">
-                            <label for="input2ndName" class="form-label">Last Name</label>
-                            <input type="text" class="form-control" id="input2ndName" placeholder="Doe" aria-label="Last name">
+                            <label for="input2ndName" class="form-label">Last Name</label>  <input type="text" class="form-control" id="input2ndName" placeholder="Doe" aria-label="Last name" required>
                         </div>
                         <div class="col-md-6">
-                          <label for="inputEmail4" class="form-label">Email</label>
-                          <input type="email" class="form-control" id="inputEmail4" placeholder="email@example.com">
+                          <label for="inputEmail4" class="form-label">Email</label>         <input type="email" class="form-control" id="inputEmail4" placeholder="email@example.com" required>
                         </div>
                         <div class="col-md-6">
-                            <label for="inputZip" class="form-label">CPF</label>
-                            <input type="number" class="form-control" placeholder="000.000.000-00">
+                            <label for="inputZip" class="form-label">CPF</label>            <input type="number" class="form-control" placeholder="000.000.000-00" required>
                         </div>
                         <div class="col-md-6">
-                            <label for="inputDate" class="form-label">Birth date</label>
-                            <input type="date" class="form-control text-muted" placeholder="mm/dd/aaaa">
+                            <label for="inputDate" class="form-label">Birth date</label>    <input type="date" class="form-control text-muted" placeholder="mm/dd/aaaa" required>
                         </div>
                         <div class="col-md-6">
                             <label for="autoSizingSelect" class="form-label">Gender</label>
-                            <select class="form-select text-muted" id="autoSizingSelect">
-                                <option selected>Choose...</option>
+                            <select class="form-select text-muted" id="autoSizingSelect" required>
+                                <option selected disable value="">Click to select</option>
                                 <option value="1">Female</option>
                                 <option value="2">Male</option>
                                 <option value="3">Other</option>
@@ -90,20 +71,17 @@
                         <div class="col-12 text-md-end">
                             <div class="form-check">
                                 <label class="form-check-label" for="gridCheck">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck">I have read and accepted the terms
+                                    <input class="form-check-input" type="checkbox" id="gridCheck" required>I have read and accepted the terms
                                 </label>
                             </div>
                         </div>
                         <div class="col-12">
-                          <button type="submit" class="joinUs">Sign in</button>
+                          <button type="submit" class="joinUs mb-5">Sign in</button>
                         </div>
                     </form>
                 </div>    
             </div>
-            <div class="row mt-5"> <p></p></div>
         </div>
-        <footer>
-        </footer>
         <!-- bootstrap JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     </body>
