@@ -10,6 +10,7 @@
         <!--Meu css-->
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/form.css">
+        <!-- javascript de validação-->
         <title>Desafio PGE - Formulário - Bruna Motta</title>
     </head>
     <body class="bg-warning">
@@ -25,6 +26,7 @@
                         <input class="form-control me-2" type="text" placeholder="SEARCH">
                     </form>
                 </div>
+                <!--links-->
                 <div class="dropdown dropstart">
                     <button class="navbar-toggler bg-dark" style="height: 55px; width: 55px; border-radius: 0%;" data-bs-toggle="dropdown">
                         <span class="navbar-toggler-icon"></span>
@@ -41,23 +43,28 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-8 col-lg-6 text-center text-md-end mt-5 offset-md-4 offset-lg-6">
-                    <h1 class="text-uppercase mt-5">Join Us</h1>
+                    <h1 class="text-uppercase mt-6">Join Us</h1>
                     <!--formulário-->
-                    <form class="row g-3 text-light">
+                    <form action="#" class="row g-3 text-light" method="post" autocomplete="on">
                         <div class="col-md-6">
-                            <label for="input1stName" class="form-label">First Name</label> <input type="text" class="form-control" id="input1stName" placeholder="John" aria-label="First name" required>
+                            <label for="input1stName" class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="input1stName" placeholder="John" aria-label="First name" required>
                         </div>
                         <div class="col-md-6">
-                            <label for="input2ndName" class="form-label">Last Name</label>  <input type="text" class="form-control" id="input2ndName" placeholder="Doe" aria-label="Last name" required>
+                            <label for="input2ndName" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" id="input2ndName" placeholder="Doe" aria-label="Last name" required>
                         </div>
                         <div class="col-md-6">
-                          <label for="inputEmail4" class="form-label">Email</label>         <input type="email" class="form-control" id="inputEmail4" placeholder="email@example.com" required>
+                            <label for="inputEmail4" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="inputEmail4" placeholder="email@example.com" required>
                         </div>
                         <div class="col-md-6">
-                            <label for="inputZip" class="form-label">CPF</label>            <input type="number" class="form-control" placeholder="000.000.000-00" required>
+                            <label for="cpf" class="form-label">CPF</label>
+                            <input type="text" class="form-control" id="cpf" placeholder="CPF(only numbers)" minlength="11" maxlength="14" required>
                         </div>
                         <div class="col-md-6">
-                            <label for="inputDate" class="form-label">Birth date</label>    <input type="date" class="form-control text-muted" placeholder="mm/dd/aaaa" required>
+                            <label for="inputDate" class="form-label">Birth date</label>
+                            <input type="date" class="form-control text-muted" id="inputDate" placeholder="dd/mm/aaaa" required>
                         </div>
                         <div class="col-md-6">
                             <label for="autoSizingSelect" class="form-label">Gender</label>
@@ -71,18 +78,40 @@
                         <div class="col-12 text-md-end">
                             <div class="form-check">
                                 <label class="form-check-label" for="gridCheck">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck" required>I have read and accepted the terms
+                                    <input class="form-check-input" type="checkbox" id="gridCheck" required>I have read and agree to the terms
                                 </label>
                             </div>
                         </div>
-                        <div class="col-12">
-                          <button type="submit" class="joinUs mb-5">Sign in</button>
+                        <!-- botão do formulário -->
+                        <div class="col-12"> <!--Ajustar atributos do botão para aparecer modal apenas quando formulario estiver ok-->
+                            <button type="submit" value="Submit" id="botao" class="joinUs mb-5" data-bs-toggle="modal" data-bs-target="#exampleModal">Sign in</button>
                         </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h1 class="modal-title fs-1 text-dark" id="exampleModalLabel">Success!</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                <p class="text-dark fs-6 text-center">Please, review your information:</p>
+                                    <p class="text-dark fs-6 text-center"> testando 1,2,3...</p>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+
                     </form>
                 </div>    
             </div>
         </div>
         <!-- bootstrap JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+        <!-- js de mascara de cpf-->
+        <script src="functionjs/validation.js"></script>
     </body>
 </html>

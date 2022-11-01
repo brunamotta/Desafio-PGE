@@ -24,6 +24,10 @@ nav {
     border-radius: 50px;
 }
 
+.mt-6 {
+    margin-top: 75px
+}
+
 h1 {
     font-family: 'Bebas Neue', cursive;
     font-size: 100px;
