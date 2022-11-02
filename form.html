@@ -45,7 +45,7 @@
                 <div class="col-12 col-md-8 col-lg-6 text-center text-md-end mt-5 offset-md-4 offset-lg-6">
                     <h1 class="text-uppercase mt-6">Join Us</h1>
                     <!--formulário-->
-                    <form action="#" class="row g-3 text-light" method="post" autocomplete="on">
+                    <form class="row g-3 text-light" method="post" autocomplete="on" onsubmit="return false">
                         <div class="col-md-6">
                             <label for="input1stName" class="form-label">First Name</label>
                             <input type="text" class="form-control" id="input1stName" placeholder="John" aria-label="First name" required>
@@ -83,8 +83,8 @@
                             </div>
                         </div>
                         <!-- botão do formulário -->
-                        <div class="col-12"> <!--Ajustar atributos do botão para aparecer modal apenas quando formulario estiver ok-->
-                            <button type="submit" value="Submit" id="botao" class="joinUs mb-5" data-bs-toggle="modal" data-bs-target="#exampleModal">Sign in</button>
+                        <div class="col-12" id="showmodal"> <!--Ajustar atributos do botão para aparecer modal apenas quando formulario  onclick="aparecerModal()" estiver ok-->
+                            <button type="submit" value="Submit" id="botao" class="joinUs mb-5" onclick="aparecerModal()">Sign in</button>
                         </div>
                         <!-- Modal -->
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -95,8 +95,7 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                <p class="text-dark fs-6 text-center">Please, review your information:</p>
-                                    <p class="text-dark fs-6 text-center"> testando 1,2,3...</p>
+                                    <p class="text-dark fs-6 text-center" id="dadosNoModal"></p>
                                 </div>
                                 <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -104,7 +103,6 @@
                             </div>
                             </div>
                         </div>
-
                     </form>
                 </div>    
             </div>
